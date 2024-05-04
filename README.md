@@ -42,13 +42,18 @@ int main()
 	msgid = msgget(key, 0666 | IPC_CREAT); 
 	message.mesg_type = 1; 
 	printf("Write Data : "); 
-	gets(message.mesg_text); 
+	fgets(message.mesg_text, sizeof(message.mesg_text), stdin); 
 	// msgsnd to send message 
 	msgsnd(msgid, &message, sizeof(message), 0); 
 	// display the message 
 	printf("Data send is : %s \n", message.mesg_text); 
 	return 0; 
-} 
+}
+````
+## OUTPUT
+![image](https://github.com/RoopakCS/Linux-IPC-Message-Queues/assets/139228922/4d4ad802-d574-40f0-b022-445d834b435f)
+
+````c
 
 // C Program for Message Queue (Reader Process)
 #include <stdio.h>
