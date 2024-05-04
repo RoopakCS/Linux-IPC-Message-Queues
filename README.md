@@ -91,6 +91,8 @@ int main()
 
 
 ## OUTPUT
+![image](https://github.com/RoopakCS/Linux-IPC-Message-Queues/assets/139228922/a6ab0a3c-19d8-427d-bb64-e506c0897f76)
+
 
 
 
